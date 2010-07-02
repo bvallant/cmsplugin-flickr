@@ -1,0 +1,12 @@
+This is a flickr plugin for "django-cms":http://www.django-cms.org. It enables you to display Flickr images on your pages, getting them by username, group-id or tags!
+
+Installation:
+* Put it somewhere on your PYTHONPATH (probably a package 'cms_plugins')
+* The plugin requires "Beej's Python Flickr API":http://stuvel.eu/projects/flickrapi, get it via @easy_install flickrapi@
+* Add it to your @INSTALLED_APPS = (..., 'cms_plugins.flickr,)@
+* Run python manage.py syncdb
+* Obtain a Flickr API key at "Flickr":http://www.flickr.com/services/apps/create/apply
+* Add the key and the secret to your @settings.py@:
+@FLICKR_API_KEY = 'xxxx'@
+@FLICKR_API_SECRET = 'xxxx'@
+* Place it on a page and use it!
