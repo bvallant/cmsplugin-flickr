@@ -1,0 +1,12 @@
+{% load i18n %}
+{% if items %}
+<div class="plugin">
+	{% if object.show_title %}
+	<h2>{{ object.title }}</h2>
+	{% endif %}
+	{% for item in items %}
+	<a href="{{ item.link }}" title="{% trans 'Show on Flickr' %}" target="_blank"><img src="{{ item.url }}" alt="{{ item.title }}"/></a>
+	{% endfor %}
+</div>
+{% endif %}
+{% if flickr_error %} {{ flickr_error }}{% endif %}
