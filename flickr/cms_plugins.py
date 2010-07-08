@@ -47,7 +47,7 @@ class FlickrPlugin(CMSPluginBase):
                     id = p.attrib['id']
                 items.append({'title': p.attrib['title'],
                               'url': FLICKR_IMAGE_URL % p.attrib,
-                              'link': url % {'user_id': 'user_id',
+                              'link': url % {'user_id': user_id,
                                                    'id': id}})
         except flickrapi.FlickrError, e:
             error = "FlickrAPI Error: " + str(e)
